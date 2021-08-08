@@ -9,15 +9,28 @@ class Square extends React.Component {
         }
     }
 
+    handleClick() {
+        console.log("the button you are clicking works")
+    }
+
 
     render() {
         return (
             <div>
-                <div className="box1"></div>
-                <div className="box2"></div>
-                <div className="box3"></div>
-                <div className="box4"></div>
-                <button></button>
+                <ul className="djbooth">
+                    <li className="box1"></li>
+                    <li className="box2"></li>
+                    <li className="box3"></li>
+                    <li className="box4"></li>
+                </ul>
+
+                <div className="buttons">
+                    <button onClick={this.handleClick}>Box One</button>
+                    <button>Box Two</button>
+                    <button>Box Three</button>
+                    <button>Box Three</button>
+                </div>
+
             </div>
         )
     }
