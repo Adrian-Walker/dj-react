@@ -5,7 +5,7 @@ class Square extends React.Component {
         super()
 
         this.state = {
-
+            squares: ["white", "white", "white", "white"]
         }
     }
 
@@ -13,7 +13,7 @@ class Square extends React.Component {
     render() {
         return (
             <div>
-                <h1>hello world</h1>
+                <h1>{this.state.squares}</h1>
                 <button></button>
             </div>
         )

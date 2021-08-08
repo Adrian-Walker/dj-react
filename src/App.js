@@ -6,10 +6,11 @@ class App extends React.Component {
         super()
 
         this.state = {
-            squares: ["white", "white", "white", "white"]
+            
         }
     }
 
+    const
 
     render() {
         return (
