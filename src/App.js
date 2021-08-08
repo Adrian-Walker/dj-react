@@ -1,4 +1,5 @@
 import React from "react"
+import Square from "./Square"
 
 class App extends React.Component {
     constructor() {
