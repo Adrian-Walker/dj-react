@@ -7,6 +7,8 @@ class Square extends React.Component {
         this.state = {
             squares: ["white", "white", "white", "white"]
         }
+        this.handleClick = this.handleClick.bind(this)
+
     }
 
     handleClick() {
