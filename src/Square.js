@@ -2,11 +2,15 @@ import React from 'react'
 
 
 
-const colors = Square.map(color => color = props.square)
+
 
 function Square(props) {
+
+    // const colors = Square.map(color => color = props.square)
+
     return (
-        <div className="box" style={{ backgroundColor: props.color }}>
+        <div className="box" style={{ backgroundColor: props.colors }}>
+            {/* {colors} */}
 
         </div>
     )
