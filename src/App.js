@@ -6,7 +6,7 @@ class App extends React.Component {
         super()
 
         this.state = {
-            squares: ["blue", "white", "white", "white"]
+            squares: ["blue", "white", "red", "green"]
         }
 
         this.handleClick = this.handleClick.bind(this)
@@ -25,7 +25,7 @@ class App extends React.Component {
         console.log("the button you are clicking works")
     }
     handleClick4() {
-        console.log("the button you are clicking works")
+        this.state.squares[3]
     }
 
 
