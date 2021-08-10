@@ -28,7 +28,7 @@ class App extends React.Component {
         console.log("the button you are clicking works")
     }
 
-    const colors = 
+
 
     render() {
         return (
