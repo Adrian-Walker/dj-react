@@ -6,40 +6,49 @@ class App extends React.Component {
         super()
 
         this.state = {
-            squares: ["blue", "white", "red", "green"]
+            squares: ["blue", "white", "yellow", "green"]
         }
 
-        this.handleClick = this.handleClick.bind(this)
-        this.handleClick2 = this.handleClick2.bind(this)
+        this.smallTime = this.smallTime.bind(this)
+        this.partyDj = this.partyDj.bind(this)
         this.handleClick3 = this.handleClick3.bind(this)
         this.handleClick4 = this.handleClick4.bind(this)
     }
 
-    handleClick() {
-        console.log("the button you are clicking works")
+    smallTime() {
+        this.setState(prevState => {
+            if (prevState.squares[0] === "white") {
+                return { squares: ["black", "black", "black", "black"] }
+            } else {
+                return { squares: ["white", "white", "white", "white"] }
+            }
+        })
     }
-    handleClick2() {
+    partyDj() {
         console.log("the button you are clicking works")
     }
     handleClick3() {
         console.log("the button you are clicking works")
     }
     handleClick4() {
-        this.state.squares[3]
+        this.setState(prevState => {
+            prevState.squares.map()
+        })
     }
 
 
 
     render() {
+        const squareComp = this.state.squares.map(color => <Square color={color} />)
+
         return (
+
             <div>
-                <Square />
-                <Square />
-                <Square />
-                <Square />
+
+                {squareComp}
                 <div className="buttons">
-                    <button onClick={this.handleClick}>Box One</button>
-                    <button onClick={this.handleClick2}>Box Two</button>
+                    <button onClick={this.smallTime}>Small Time</button>
+                    <button onClick={this.partyDj}>Party DJ</button>
                     <button onClick={this.handleClick3}>Box Three</button>
                     <button onClick={this.handleClick4}>Box Three</button>
                 </div>
