@@ -25,12 +25,14 @@ class App extends React.Component {
         })
     }
     partyDj() {
+        this.setState(prevState => {
+            prevState = { squares: ["purple", 'purple', "yellow", "green"] }
+        })
+    }
+    professionalDj() {
         console.log("the button you are clicking works")
     }
-    handleClick3() {
-        console.log("the button you are clicking works")
-    }
-    handleClick4() {
+    bigTimeDj() {
         this.setState(prevState => {
             prevState.squares.map()
         })
@@ -49,8 +51,8 @@ class App extends React.Component {
                 <div className="buttons">
                     <button onClick={this.smallTime}>Small Time</button>
                     <button onClick={this.partyDj}>Party DJ</button>
-                    <button onClick={this.handleClick3}>Box Three</button>
-                    <button onClick={this.handleClick4}>Box Three</button>
+                    <button onClick={this.professionalDj}>Professional DJ</button>
+                    <button onClick={this.bigTimeDj}>Big Time DJ</button>
                 </div>
 
             </div>
