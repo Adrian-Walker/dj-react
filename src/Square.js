@@ -13,7 +13,6 @@ function Square(props) {
     return (
 
         <div className="box" style={{ backgroundColor: props.color }}>
-            {/* {colors} */}
 
         </div>
     )

@@ -10,6 +10,7 @@
 
 
 .box {
+    display: inline-grid;
     width: 200px;
     height: 200px;
     border: 15px solid black;

@@ -11,8 +11,8 @@ class App extends React.Component {
 
         this.smallTime = this.smallTime.bind(this)
         this.partyDj = this.partyDj.bind(this)
-        this.handleClick3 = this.handleClick3.bind(this)
-        this.handleClick4 = this.handleClick4.bind(this)
+        this.professionalDj = this.professionalDj.bind(this)
+        this.proDj2 = this.proDj2.bind(this)
     }
 
     smallTime() {
@@ -26,16 +26,29 @@ class App extends React.Component {
     }
     partyDj() {
         this.setState(prevState => {
-            prevState = { squares: ["purple", 'purple', "yellow", "green"] }
+            const firstHalf = ["purple", "purple"]
+            const secondHalf = prevState.squares.slice(2)
+            return { squares: firstHalf.concat(secondHalf) }
+
         })
     }
+
     professionalDj() {
-        console.log("the button you are clicking works")
-    }
-    bigTimeDj() {
         this.setState(prevState => {
-            prevState.squares.map()
+            const first = prevState.squares.findIndex(3)
+            const second = ["blue"]
+            return { squares: first.concat(second) }
         })
+    }
+
+
+
+
+
+    proDj2() {
+        // this.setState(prevState => {
+
+        // })
     }
 
 
@@ -52,7 +65,7 @@ class App extends React.Component {
                     <button onClick={this.smallTime}>Small Time</button>
                     <button onClick={this.partyDj}>Party DJ</button>
                     <button onClick={this.professionalDj}>Professional DJ</button>
-                    <button onClick={this.bigTimeDj}>Big Time DJ</button>
+                    <button onClick={this.proDj2}>Pro Dj 2</button>
                 </div>
 
             </div>
