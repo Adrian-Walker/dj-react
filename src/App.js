@@ -66,6 +66,7 @@ class App extends React.Component {
                     <button onClick={this.partyDj}>Party DJ</button>
                     <button onClick={this.professionalDj}>Professional DJ</button>
                     <button onClick={this.proDj2}>Pro Dj 2</button>
+                    <br />
                 </div>
 
             </div>
