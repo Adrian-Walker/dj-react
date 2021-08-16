@@ -62,10 +62,10 @@ class App extends React.Component {
 
                 {squareComp}
                 <div className="buttons">
-                    <button name="" onClick={this.smallTime}>Small Time</button>
-                    <button name="" onClick={this.partyDj}>Party DJ</button>
-                    <button name="" onClick={this.professionalDj}>Professional DJ</button>
-                    <button name="" onClick={this.proDj2}>Pro Dj 2</button>
+                    <button className="small" onClick={this.smallTime}>Small Time</button>
+                    <button className="party" onClick={this.partyDj}>Party DJ</button>
+                    <button className="pro" onClick={this.professionalDj}>Professional DJ</button>
+                    <button className="pro2" onClick={this.proDj2}>Pro Dj 2</button>
                     <br />
                 </div>
 
