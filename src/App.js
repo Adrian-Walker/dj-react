@@ -17,10 +17,10 @@ class App extends React.Component {
 
     smallTime() {
         this.setState(prevState => {
-            if (prevState.squares[0] === "white") {
-                return { squares: ["black", "black", "black", "black"] }
-            } else {
+            if (prevState.squares[0] !== "white") {
                 return { squares: ["white", "white", "white", "white"] }
+            } else if (prevState.squares[0] === "white") {
+                return { squares: ["black", "black", "black", "black"] }
             }
         })
     }
@@ -35,9 +35,9 @@ class App extends React.Component {
 
     professionalDj() {
         this.setState(prevState => {
-            const first = prevState.squares.findIndex(3)
-            const second = ["blue"]
-            return { squares: first.concat(second) }
+            const first = prevState.squares.slice(0, 2)
+            const third = prevState.squares.slice(3)
+            return { squares: [...first, "blue", ...third] }
         })
     }
 
@@ -46,9 +46,10 @@ class App extends React.Component {
 
 
     proDj2() {
-        // this.setState(prevState => {
-
-        // })
+        this.setState(prevState => {
+            const newArr = prevState.squares.slice(1)
+            return { squares: [...newArr, "blue"] }
+        })
     }
 
 
